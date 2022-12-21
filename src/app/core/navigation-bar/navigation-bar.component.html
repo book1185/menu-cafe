@@ -1,0 +1,13 @@
+<div fxLayout="row" class="py-2 border border-[#ebebeb] border-solid border-x-1" >
+    <mat-icon color="primary" class="text-[#7B7B7B] cursor-pointer" *ngIf="stepIndex!=1">chevron_left</mat-icon>
+  <div fxLayout="row" fxLayoutAlign="center center" fxFlex class="px-1">
+    <div class="mr-2 font-medium" >
+        {{stepIndex}}
+    </div>
+    <div class="text-[#7B7B7B] font-medium">
+        {{keyWord}}
+    </div>
+  </div>
+  <mat-icon color="primary" class="text-[#7B7B7B] cursor-pointer" click="navigateNext()">chevron_right</mat-icon>
+
+</div>

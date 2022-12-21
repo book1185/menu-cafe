@@ -1,0 +1,11 @@
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class IndexService {
+
+  index="1"
+
+  constructor() { }
+}

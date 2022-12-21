@@ -1,0 +1,38 @@
+<div>
+  <div *ngIf="foodDesertMode" class="ml-2">
+    <div>
+      <mat-form-field class="example-full-width">
+        <mat-label>Menu Name</mat-label>
+        <input matInput placeholder="Ex. 自家製アイスクリーム"  [(ngModel)]="foodDesert.menu" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="example-full-width">
+        <mat-label>Menu Sub Name</mat-label>
+        <input matInput placeholder="Ex. (ローティー添え)"  [(ngModel)]="foodDesert.menuSub"/>
+      </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="example-full-width">
+          <mat-label>Description</mat-label>
+          <input matInput placeholder="Ex. abc." [(ngModel)]="foodDesert.description" />
+        </mat-form-field>
+      </div>
+    <div>
+      <mat-form-field class="example-full-width">
+        <mat-label>Price</mat-label>
+        <input matInput placeholder="Ex. 600" [(ngModel)]="foodDesert.price" />
+      </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="example-full-width">
+          <mat-label>Pic Url</mat-label>
+          <input matInput placeholder="Ex. google.drive..."  [(ngModel)]="foodDesert.picurl"/>
+        </mat-form-field>
+      </div>
+      <div (click)="saveFoodDesert()">
+        submit
+      </div>
+  </div>
+  <div *ngIf="drinkMode">drink mode</div>
+</div>

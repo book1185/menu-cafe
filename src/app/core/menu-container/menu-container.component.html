@@ -1,0 +1,11 @@
+
+<div fxLayout="column" fxLayoutAlign="space-between" >
+    <div fxLayout="row wrap" fxLayoutAlign="space-between">
+        <div *ngFor="let item of itemList"  (click)="goProducts(item.query)" >
+            <div class="bg-black mt-3" style="width:150px; height:112.5px;" ></div>
+            <div class="ml-3 text-[#7B7B7B]">{{item.menu}}</div>
+        </div>
+       
+    </div>
+
+</div>

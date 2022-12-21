@@ -1,0 +1,25 @@
+<div fxLayout="column">
+  <div fxLayout="column">
+    <div *ngFor="let item of itemList">
+      <div fxLayout="row" class="mt-3 mb-1">
+        <div class="bg-black" style="width: 100px; height: 112.5px"></div>
+        <div  fxFlex class="ml-3 ">
+          <div class=" text-[#7B7B7B]">{{ item.menu }}</div>
+          <div *ngIf="item?.menuSub" class=" text-[#7B7B7B]">{{ item.menuSub }}</div>
+          <div class="text-xs mt-2">{{ item.description }}</div>
+          <div class="text-xs mt-2">{{ item.price }}円</div>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="start center" class="ml-1">
+        <mat-form-field appearance="fill" class="mr-6">
+          <mat-select>
+            <mat-option *ngFor="let food of foods" [value]="food.value">
+              {{food.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-raised-button color="primary">注文</button>
+      </div>
+    </div>
+  </div>
+</div>
